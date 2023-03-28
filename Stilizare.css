@@ -1,0 +1,79 @@
+body{
+    margin: 100px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050210   
+}
+
+.circle{
+    width:40vh;
+    height:40vh;
+    position:relative;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius:50%;
+    box-shadow: 550px 550px 550px linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    filter: brightness(100%);
+    animation: my-animation 1s linear infinite;
+}
+@keyframes my-animation {
+  from {
+        transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(350deg);
+  }
+}
+.circle span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+    filter:brightness(100%)
+}
+.circle span:nth-child(1){
+    filter:blur(5px) 
+}
+.circle span:nth-child(2){
+    filter:blur(10px) 
+}
+.circle span:nth-child(3){
+    filter:blur(15px)
+}
+.circle span:nth-child(4){
+    filter:blur(20px)
+}
+.inner{
+    position: absolute;
+    background: #050210;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    top: 42%;
+    left: 50%;
+    margin: -150px 0px 0px -150px
+}
+.third{
+    position: absolute;
+    background: #161320;
+    border-radius: 50%;
+    color:#050210;
+    height: 280px;
+    width: 280px;
+    top: 43.25%;
+    left: 50.5%;
+    margin: -150px 0px 0px -150px;
+    animation: scaleIn 0.95s infinite cubic-bezier(.36, .11, .89, .32);
+}
+@keyframes scaleIn {
+    from {
+      transform: scale(.25, .25);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0.9, 0.9);
+      opacity: 0;
+    }
+  }
